@@ -9,7 +9,6 @@ import friends from './backend-data/friends.json'
 import transactions from './backend-data/transactions.json'
 
 function App() {
-
   return (
     <Container>
       <div>
@@ -26,7 +25,6 @@ const Container = styled.div`
   border: 1px black solid;
   width: 80%;
   display: block;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

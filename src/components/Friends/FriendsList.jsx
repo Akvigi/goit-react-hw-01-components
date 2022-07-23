@@ -16,11 +16,15 @@ function FriendList({ friends }) {
 }
 
 FriendList.propTypes = {
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-    id: PropTypes.string,
-    isOnline: PropTypes.bool,
+    friends: PropTypes.arrayOf(
+        PropTypes.shape({
+            avatar: PropTypes.string,
+            name: PropTypes.string,
+            id: PropTypes.string,
+            isOnline: PropTypes.bool,
+        })).isRequired
 }
+
 
 const Marker = styled.div`
     width: 10px;

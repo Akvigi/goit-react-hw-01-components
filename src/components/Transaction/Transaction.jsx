@@ -23,10 +23,13 @@ const Transactions = ({array}) => {
 }
 
 Transactions.propTypes = {
-    amount: PropTypes.string,
-    id: PropTypes.string,
-    currency: PropTypes.string,
-    type: PropTypes.string,
+    friends: PropTypes.arrayOf(
+        PropTypes.shape({
+            amount: PropTypes.string,
+        id: PropTypes.string,
+        currency: PropTypes.string,
+        type: PropTypes.string,
+        })).isRequired
 }
 
 const Row = styled.tr`

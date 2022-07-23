@@ -1,4 +1,4 @@
-import SimpleItem from '../../../Item'
+import SimpleItem from '../../../Item/Item'
 import styles from './Statistic.module.scss'
 import PropTypes from 'prop-types'
 

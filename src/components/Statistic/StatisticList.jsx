@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import SimpleItem from "../Item"
+import SimpleItem from "../Item/Item"
 import PropTypes from 'prop-types'
 
 function Statistic({ title, data }) {
@@ -16,9 +16,12 @@ function Statistic({ title, data }) {
 
 Statistic.propTypes = {
     title: PropTypes.string,
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string,
+            label: PropTypes.string,
+            percentage: PropTypes.number
+        })).isRequired
 }
 
 const List = styled.ul` 

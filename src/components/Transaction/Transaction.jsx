@@ -3,14 +3,22 @@ import PropTypes from "prop-types"
 
 const Transactions = ({array}) => {
     return  <section>
-        <ul>
-            <Item><Span>Type</Span><Span>Amount</Span><Span>Currency</Span></Item>
-            {array.map(({ id, type, amount, currency}) => {
-                return <Item key={id}>
-                            <Span>{type}</Span><Span>{amount}</Span><Span>{currency}</Span>
-                        </Item>
+                <table>
+                    <thead>
+                        <Row>
+                            <Block>Type</Block>
+                            <Block>Amount</Block>
+                            <Block>Currency</Block>
+                        </Row>
+                    </thead>
+                    <tbody>
+                        {array.map(({ id, type, amount, currency }) => {
+                        return <Row key={id}>
+                                    <Block>{type}</Block><Block>{amount}</Block><Block>{currency}</Block>
+                                </Row>
                     })}
-                </ul>
+                    </tbody>
+                </table>
             </section>
 }
 
@@ -21,14 +29,14 @@ Transactions.propTypes = {
     type: PropTypes.string,
 }
 
-const Item = styled.li`
+const Row = styled.tr`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 450px;
 `
 
-const Span = styled.span`
+const Block = styled.th`
     display: flex;
     justify-content: center;
     align-items: center;

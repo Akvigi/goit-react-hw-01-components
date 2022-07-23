@@ -27,6 +27,7 @@ const Container = styled.div`
   display: block;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
   align-items: center;
   padding: 2% 4%;
   justify-content: space-between;
